@@ -1,0 +1,172 @@
+.connect-with-us {
+  display: flex;
+  align-items: center;
+  height: 56.25rem;
+  min-height: calc(100vh - #{$footer-height});
+
+  @include for-size(phone-only) {
+    height: 71.5rem;
+  }
+
+  &__left-column {
+    min-width: 35.5vw;
+    padding: 0 var(--wrapper-padding);
+
+    @include for-size(tablet-down) {
+      width: 100%;
+      position: absolute;
+      top: 9.5rem;
+      right: 50%;
+      transform: translateX(50%);
+      z-index: 10;
+      text-align: center;
+      padding: 0 var(--wrapper-padding);
+    }
+
+    @include for-size(phone-only) {
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  &__title {
+    line-height: 5.4rem;
+
+    @media (max-width: 1370px) {
+      font-size: 5rem;
+      line-height: 1em;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 4rem;
+    }
+
+    @include for-size(tablet-down) {
+      @include font-size(xxl);
+      color: white;
+    }
+
+    @media (max-width: 374px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__short-description {
+    padding-right: 12.3rem;
+    margin-top: 2rem;
+
+    @media (max-width: 1200px) {
+      padding-right: 6rem;
+    }
+
+    @include for-size(tablet-down) {
+      color: white;
+      padding: 0;
+      margin-top: 1.5rem;
+    }
+
+    @include for-size(phone-only) {
+      width: 70%;
+      margin: 1.5rem auto 0 auto;
+    }
+  }
+
+  &__right-column {
+    height: 100%;
+    max-width: 64.5vw;
+    min-width: 60%;
+    position: relative;
+
+    @include for-size(tablet-down) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__background-image {
+    height: 100%;
+
+    &::after {
+      content: '';
+      background: linear-gradient(109.16deg, rgba(0, 0, 0, 0.4) -12.45%, rgba(0, 0, 0, 0) 104.6%);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @include for-size(phone-only) {
+        background: linear-gradient(156.54deg, rgba(0, 0, 0, 0.6) 22.6%, rgba(0, 0, 0, 0) 87.81%);
+      }
+    }
+  }
+
+  &__form {
+    width: 31.1vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    left: 15.5vw;
+
+    @include for-size(tablet-down) {
+      padding: 2.5rem;
+      width: 100%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+    }
+
+    @include for-size(phone-only) {
+      top: 23.12rem;
+      transform: translate(-50%, 0);
+    }
+
+    .field {
+      width: 100%;
+      
+      &__input {
+        width: 100%;
+      }
+    }
+
+    &-submit {
+      margin: 2.5rem auto 0 auto;
+      display: block;
+      font-weight: 400;
+      padding: 1.63rem 6.4rem;
+
+      @include for-size(phone-only) {
+        width: 100%;
+        padding: 1.63rem 4rem;
+      }
+    }
+  }
+}
+
+.contact-form__message {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 90%;
+  text-align: center;
+
+  &-title {
+    color: white;
+  }
+
+  p {
+    margin-top: 1rem;
+    color: white;
+  }
+
+  &--error {
+    font-size: 1rem;
+    margin-top: 3rem;
+    color: black;
+
+    .title {
+      font-size: inherit;
+      color: #b92015;
+    }
+  }
+}

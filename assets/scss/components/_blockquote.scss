@@ -1,0 +1,65 @@
+.blockquote {
+  @include secondary-font;
+  width: var(--block-width-80);
+  margin: 5rem 0 0 10vw;
+  padding: 3.5rem 0;
+
+  @include for-size(tablet-down) {
+    margin: 6.55rem auto 0.55rem auto;
+    padding: 3.45rem 0;
+  }
+
+  @include for-size(phone-only) {
+    width: var(--block-width-76);
+  }
+
+  &:before {
+    color: #F2F2F2;
+    font-size: 22.5rem;
+    line-height: 22.5rem;
+    height: 10rem;
+    top: -2rem;
+    left: -6rem;
+
+    @include for-size(tablet-down) {
+      top: -3rem;
+      left: -6rem;
+    }
+
+    @include for-size(phone-only) {
+      left: -5rem;
+    }
+  }
+
+  &__text {
+    color: $dark-gray;
+    font-weight: 700;
+    z-index: 100;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  &__source {
+    @include primary-font;
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2.5rem;
+
+    &:before {
+      content: '';
+      border-bottom: 2px solid $gray;
+      display: inline-block;
+      width: 16rem;
+      height: 2px;
+      margin-right: 2rem;
+
+      @include for-size(tablet-down) {
+        width: 6.125rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

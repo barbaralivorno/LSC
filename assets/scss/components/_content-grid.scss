@@ -1,0 +1,48 @@
+.content-grid {
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  
+  @include for-size(phone-only) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  &__article {
+    margin-bottom: 3rem;
+
+    @include for-size(phone-only) {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+
+      &-wrapper {
+        padding-top: 33.3333%;
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &-link {
+      text-decoration: underline;
+    }
+
+    &-content {
+      margin-top: 0.5rem;
+
+      @include for-size(phone-only) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+  }
+}
